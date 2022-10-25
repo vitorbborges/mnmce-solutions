@@ -219,3 +219,59 @@ $$
 & = n\sum_{k = 0}^{n-1} \cos\left(k\frac{2\pi}{n}\right) \\
 \end{align*}
 $$
+
+
+The same simplification can be made for the IMAGINARY PART:
+
+$$
+\begin{align*} 
+& = \sum_{k = 0}^{n-1} (k + 1)\sin\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\sin\left((n + k)\frac{2\pi}{n}\right) \\ 
+& = \sum_{k = 0}^{n-1} (k + 1)\sin\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\sin\left(2\pi + k\frac{2\pi}{n}\right) \\ 
+ \\
+& \sin(2\pi + x) = \sin(x) \\
+ \\
+& = \sum_{k = 0}^{n-1} (k + 1)\sin\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\sin\left(k\frac{2\pi}{n}\right) \\ 
+& = \sum_{k = 0}^{n-2} (k + 1)\sin\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\sin\left(k\frac{2\pi}{n}\right) +n\sin\left((n - 1)\frac{2\pi}{n}\right) \\ 
+& = \sum_{k = 0}^{n-2} \left( (k + 1)\sin\left(k\frac{2\pi}{n}\right) + (n - k - 1)\sin\left(k\frac{2\pi}{n}\right) \right) +n\sin\left((n - 1)\frac{2\pi}{n}\right) \\
+& = \sum_{k = 0}^{n-2} \left( (k + 1 + n - k - 1)\sin\left(k\frac{2\pi}{n}\right) \right) + n\sin\left((n - 1)\frac{2\pi}{n}\right) \\
+& = \sum_{k = 0}^{n-2} \left( n\sin\left(k\frac{2\pi}{n}\right) \right) + n\sin\left((n - 1)\frac{2\pi}{n}\right) \\
+& = n\sum_{k = 0}^{n-1} \sin\left(k\frac{2\pi}{n}\right) \\
+\end{align*}
+$$
+
+
+We can join the two parts to arrive at:
+
+$$
+\begin{align*} 
+\textbf x \cdot \textbf y & = n\sum_{k = 0}^{n-1} \cos\left(k\frac{2\pi}{n}\right) + ni\sum_{k = 0}^{n-1} \sin\left(k\frac{2\pi}{n}\right) \\
+& = n\sum_{k = 0}^{n-1} \left( \cos\left(k\frac{2\pi}{n}\right) + i \sin\left(k\frac{2\pi}{n}\right) \right) \\
+& = n\sum_{k = 0}^{n-1} e^{i\frac{2\pi k}{n}}
+\end{align*}
+$$
+
+Note that proving that $n\sum_{k = 0}^{n-1} e^{i\frac{2\pi k}{n}} = 0$ is the same thing as proving that $\ sum_{k = 0}^{n-1} e^{i\frac{2\pi k}{n}} = 0$. We will then call this sum:
+
+$$
+\begin{align*} 
+S_N  & = \sum_{k = 0}^{n-1} e^{i\frac{2\pi k}{n}} \\
+S_N e^{i\frac{2\pi}{n}} & = \sum_{k = 0}^{n-1} e^{i\frac{2\pi (k + 1)}{n}} \\
+S_N e^{i\frac{2\pi}{n}} - S_N & = \sum_{k = 0}^{n-1} e^{i\frac{2\pi (k + 1)}{n}} - \sum_{k = 0}^{n-1} e^{i\frac{2\pi k}{n}} \\
+S_N(e^{i\frac{2\pi}{n}} - 1) & = e^{i2\pi} + \sum_{k = 0}^{n-2} e^{i\frac{2\pi (k + 1)}{n}} - e^0 - \sum_{k = 1}^{n-1} e^{i\frac{2\pi k}{n}} \\
+& = e^{i2\pi} - 1 + \sum_{k = 0}^{n-2} e^{i\frac{2\pi (k + 1)}{n}} - \sum_{k = 0}^{n-2} e^{i\frac{2\pi (k + 1)}{n}}\\
+& = e^{i2\pi} - 1 \\
+\\
+\Rightarrow S_N & = \frac{(e^{i2\pi} - 1)}{(e^{i\frac{2\pi}{n}} - 1)} \\
+\\
+& = \frac{(\cos(2\pi) + i\sin(2\pi) - 1)}{\left( cos(\frac{2\pi}{n}) + i\sin(\frac{2\pi}{n}) - 1 \right)} \\
+\\
+&\cos(2\pi)  = 1 \\
+&\sin(2\pi)  = 0 \\
+\\
+& = \frac{(1 + i0 - 1)}{\left( cos(\frac{2\pi}{n}) + i\sin(\frac{2\pi}{n}) - 1 \right)} \\
+\\
+& = \frac{(0)}{\left( cos(\frac{2\pi}{n}) + i\sin(\frac{2\pi}{n}) - 1 \right)} \\
+\\
+& = 0
+\end{align*}
+$$
