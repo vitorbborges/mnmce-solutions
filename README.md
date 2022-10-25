@@ -12,10 +12,8 @@ We have $N$ random variables $Z$ that follow the distribution $Z \sim U[0, 1]$. 
 Let's define a new random variable $Y$, which depends on $Z$ and follows the following Bernoulli distribution:
 
 $$
-Y(Z) \sim Bernoulli \left\{
-\begin{matrix}
+Y(Z) \sim Bernoulli \begin{cases}
 1,&se& Z\leq x\\
 0,&se& Z > x
-\end{matrix}
-\right\}
+\end{cases}
 $$
