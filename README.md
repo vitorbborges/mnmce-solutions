@@ -8,5 +8,5 @@ The question corresponds to exercise 7 located on page 7 of Chapter 5 - Sorting 
 
 -----
 
-We have $N$ random variables $Z$ that follow the distribution $ Z \sim U[0, 1] $. In sequence notation: $\{Z_{i}\}_{i = 1}^{N}$.
+We have $N$ random variables $Z$ that follow the distribution $Z \sim U[0, 1]$. In sequence notation: $\{Z_{i}\}_{i = 1}^{N}$.
 Let's define a new random variable $ Y $, which depends on $ Z $ and follows the following Bernoulli distribution:
