@@ -134,3 +134,5 @@ The string $x_1 x_2 ... x_N$ is called $n-ary$ if each element $x_j$ belongs to 
 This abstract definition is made clearer with an example of an 'orthogonal array' of order 4 and depth 5:
 
 ![orthogonal_array](http://prorum.com/?qa=blob&qa_blobid=662566948865177969)
+
+If we apply the transformation $k = e^{2k\pi i / n}$ on all elements, the inner product of any two line vectors $\textbf{x}, \textbf{y}$ can be expressed by:
