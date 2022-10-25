@@ -126,3 +126,9 @@ return round(erro_medio, 5)
 The absolute mean error found was 0.00205.
 
 ## Show that if each element $k$ in an 'orthogonal array' is replaced by $e^{2 \pi k i / n}$, the rows become orthogonal vectors in the usual sense (their inner product is equal to zero ).
+
+The book defines the 'orthogonal array' mathematical structure as follows:
+
+The string $x_1 x_2 ... x_N$ is called $n-ary$ if each element $x_j$ belongs to the set $\{0, 1, ..., n - 1\}$ of digits \( n-ary \). The two strings \( x_1 x_2 ... x_N \) and \( y_1 y_2 ... y_N \) are said to be \( orthogonal \) if the \( N \) pairs \( (x_j,y_j) \) are distinct for \( 1 \leq j \leq N \). (Consequently, two strings \( n-ary \) cannot be orthogonal if their length exceeds \( n^2 \).) A matrix \( n-ary \) with \( m \) rows and \( n ^2 \) columns whose rows are orthogonal to each other is called 'orthogonal array' of order \( n \) and depth \( m \).
+
+This abstract definition is made clearer with an example of an 'orthogonal array' of order 4 and depth 5:
