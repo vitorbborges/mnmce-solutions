@@ -124,3 +124,5 @@ return round(erro_medio, 5)
 ```
 
 The absolute mean error found was 0.00205.
+
+## Show that if each element $k$ in an 'orthogonal array' is replaced by $e^{2 \pi k i / n}$, the rows become orthogonal vectors in the usual sense (their inner product is equal to zero ).
