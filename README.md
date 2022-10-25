@@ -190,3 +190,32 @@ $$
 \end{align*}
 $$
 
+
+Applying Euler's identity: $e^{xi} = \cos(x) + i\sin(x)$
+
+$$
+\begin{align*}
+\textbf x \cdot \textbf y & = \sum_{k = 0}^{n-1} (k + 1)\left(\cos\left(k\frac{2\pi}{n}\right) + i\sin\left(k\frac{2\pi}{n}\right)\right) \\ 
+& + \sum_{k = 0}^{n-2} (n - k - 1)\left(\cos\left((n + k)\frac{2\pi}{n}\right) + i\sin\left((n + k)\frac{2\pi}{n}\right)\right) \\
+& = \sum_{k = 0}^{n-1} (k + 1)\cos\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\cos\left((n + k)\frac{2\pi}{n}\right) \\
+& + i \left( \sum_{k = 0}^{n-1} (k + 1)\sin\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\sin\left((n + k)\frac{2\pi}{n}\right) \right)
+\end{align*}
+$$
+
+Let's decompose the simplification of this expression into REAL and IMAGINARY PART, starting with the REAL PART:
+
+$$
+\begin{align*} 
+& = \sum_{k = 0}^{n-1} (k + 1)\cos\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\cos\left((n + k)\frac{2\pi}{n}\right) \\ 
+& = \sum_{k = 0}^{n-1} (k + 1)\cos\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\cos\left(2\pi + k\frac{2\pi}{n}\right) \\ 
+ \\
+& \cos(2\pi + x) = \cos(x) \\
+ \\
+& = \sum_{k = 0}^{n-1} (k + 1)\cos\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\cos\left(k\frac{2\pi}{n}\right) \\ 
+& = \sum_{k = 0}^{n-2} (k + 1)\cos\left(k\frac{2\pi}{n}\right) + \sum_{k = 0}^{n-2} (n - k - 1)\cos\left(k\frac{2\pi}{n}\right) +n\cos\left((n - 1)\frac{2\pi}{n}\right) \\ 
+& = \sum_{k = 0}^{n-2} \left( (k + 1)\cos\left(k\frac{2\pi}{n}\right) + (n - k - 1)\cos\left(k\frac{2\pi}{n}\right) \right) +n\cos\left((n - 1)\frac{2\pi}{n}\right) \\
+& = \sum_{k = 0}^{n-2} \left( (k + 1 + n - k - 1)\cos\left(k\frac{2\pi}{n}\right) \right) + n\cos\left((n - 1)\frac{2\pi}{n}\right) \\
+& = \sum_{k = 0}^{n-2} \left( n\cos\left(k\frac{2\pi}{n}\right) \right) + n\cos\left((n - 1)\frac{2\pi}{n}\right) \\
+& = n\sum_{k = 0}^{n-1} \cos\left(k\frac{2\pi}{n}\right) \\
+\end{align*}
+$$
