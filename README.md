@@ -275,3 +275,6 @@ S_N(e^{i\frac{2\pi}{n}} - 1) & = e^{i2\pi} + \sum_{k = 0}^{n-2} e^{i\frac{2\pi (
 & = 0
 \end{align*}
 $$
+
+
+CONCLUSION: $\textbf x \cdot \textbf y = 0$, so the rows are orthogonal.
