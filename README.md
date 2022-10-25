@@ -24,3 +24,15 @@ Consider the following sequence $\\{Y_{i}\\}_{i = 1}^{N}$ of zeros and ones. If 
 
 The r-th term of the ordered $\\{Z_{i}\\}_{i = 1}^{N}$ will be less than $x$ if the sequence $\\{Y_{i}\\}_{i = 1}^{N}$ has more ones than the value of $r$. The number of ones in $\\{Y_{i}\\}_{i = 1}^{N}$ is $\sum_{i = 1}^{N} Y_{i}$.
 Since all these Bernoullis are independent and identically distributed, we can use the fact that a summation of Bernoulli variables follows the Binomial distribution:
+
+$$
+\sum\{Y_{i}\}_{i = 1} ^{N} = S \sim Binomial(N, x)
+$$
+
+
+We are interested in computing $P(S > r )$ which is equal to
+
+$$
+P(S  > r ) = \sum_{j = r + 1}^{N}P(S = j) =\\
+ \sum_{j = r + 1}^{N} \binom{N}{j} x^{j}(1 - x)^{N - j}
+$$
