@@ -167,3 +167,26 @@ h = n-2 & \beta^{n-2} & \beta^{n-1} & \beta^{n} & ... & \beta^{n+n-5} & \beta^{n
 h = n-1 & \beta^{n-1} & \beta^{n} & \beta^{n+1} & ... & \beta^{n+n-4} & \beta^{n+n-3} & \beta^{n+n-2} \\
 \end{matrix}
 $$
+
+We need to add up all the elements above, looking at the secondary diagonal note that the element $\beta^{n - 1}$ appears $n$ times, in fact this happens for all elements that are above the diagonal secondary, we can write this part of the sum as:
+
+$$
+\sum_{k = 0}^{n-1} (k + 1)\beta^k
+$$
+
+Looking now at what is below the secondary diagonal, we see that each term $\\{ \beta^{n + y} | y \in \\{ 0, 1, ..., n-2 \\} \\}$ appears $(n - z - 1)$ times, such that $z \in \\{ 0, 1, ..., n-2 \\}$, we can write this part of the sum as:
+
+$$
+\sum_{k = 0}^{n-2} (n - k - 1)\beta^{n + k}
+$$
+
+
+Adding these two parts together we have:
+
+$$
+\begin{align*}
+\textbf x \cdot \textbf y  & = \sum_{k = 0}^{n-1} (k + 1)\beta^k + \sum_{k = 0}^{n-2} (n - k - 1)\beta^{n + k} \\
+& =  \sum_{k = 0}^{n-1} (k + 1)e^{\frac{2\pi i}{n} k} + \sum_{k = 0}^{n-2} (n - k - 1)e^{\frac{2\pi i}{n}(n + k)} \\
+\end{align*}
+$$
+
