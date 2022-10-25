@@ -12,14 +12,15 @@ We have $N$ random variables $Z$ that follow the distribution $Z \sim U[0, 1]$. 
 Let's define a new random variable $Y$, which depends on $Z$ and follows the following Bernoulli distribution:
 
 $$
-Y(Z) \sim Bernoulli \begin{cases}
-1,&se& Z\leq x\\
-0,&se& Z > x
+Y(Z) \sim Bernoulli 
+\begin{cases}
+1,&if& Z\leq x\\
+0,&if& Z > x
 \end{cases}
 $$
 
 Note that $P(Y = 1) = P(Z \leq x) = x$ and $P(Y = 0) = P(Z > x) = 1 - x$, due to the distribution of $Z$. 
-Consider the following sequence $\\{Z_{i}\\}_{i = 1}^{N}$ of zeros and ones. If we sort the sequence $\{ Y_i \}_{i = 1}^{N}$ in a non-decreasing way, the sequence $\\{Y_{i}\\}_{i = 1} ^ {N}$ will be the number 1 appearing a few times, followed by zeros. This sequence starts to be 0 as soon as the kth value $\\{Z_{i}\\}_{i = 1}^{N}$ becomes greater than $x$.
+Consider the following sequence $\\{Y_{i}\\}_{i = 1}^{N}$ of zeros and ones. If we sort the sequence $\\{Z_{i}\\}_{i = 1}^{N}$ in a non-decreasing way, the sequence $\\{Y_{i}\\}_{i = 1}^{N}$ will be the number 1 appearing a few times, followed by zeros. This sequence starts to be 0 as soon as the kth value $\\{Z_{i}\\}_{i = 1}^{N}$ becomes greater than $x$.
 
-The r-th term of the ordered $\\{Z_{i}\\}_{i = 1}^{N}$ will be less than $x$ if the sequence $\\{Y_{i}\\}_{i = 1} ^{N$ has more ones than the value of $r$. The number of ones in $\\{Y_{i}\\}_{i = 1}^{N}$ is $\sum\\{Y_{i}\\}_{i = 1}^{N}$.
+The r-th term of the ordered $\\{Z_{i}\\}_{i = 1}^{N}$ will be less than $x$ if the sequence $\\{Y_{i}\\}_{i = 1}^{N}$ has more ones than the value of $r$. The number of ones in $\\{Y_{i}\\}_{i = 1}^{N}$ is $\sum \\{Y_{i}\\}_{i = 1}^{N}$.
 Since all these Bernoullis are independent and identically distributed, we can use the fact that a summation of Bernoulli variables follows the Binomial distribution:
