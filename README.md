@@ -78,3 +78,49 @@ for i in range(1000):
 return sum(experiment) / len(experiment) #proporção
 
 ```
+
+Second:
+
+```python
+
+def functional(N, r, x):
+
+p = 0
+
+for i in range(r + 1, N + 1):
+
+    p += scipy.special.binom(N, i)*(x**i)*((1 - x)**(N - i))
+
+return p
+```
+
+To evaluate the result, we will calculate the average error between the brute force implementation and the functional format found.
+
+```python
+def result_efficiency():
+
+results_1= [] #resultados de força bruta
+results_2 = [] #resultados do formato funcional
+
+for i in range(1000):
+
+    randints = [random.randint(0, 1000), random.randint(0, 1000)]
+    #sortear dois números
+
+    N = max(randints) #o maior número é N
+    r = min(randints) # o menor número é r
+    x = random.uniform(0, 1)
+
+    results_1.append(montecarlo(N, r, x))
+    results_2.append(functional(N, r, x))
+    #guardar os resultados
+
+abserror_sum = [abs(z) for z in (np.array(results_1) - np.array(results_2))]
+#erro absoluto
+erro_medio = sum(abserror_sum)/len(abserror_sum)
+#erro medio
+
+return round(erro_medio, 5)
+```
+
+The absolute mean error found was 0.00205.
