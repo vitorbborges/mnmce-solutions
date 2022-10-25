@@ -41,3 +41,40 @@ $$
 In order to confirm this result, two functions were implemented in the Python language. The first repeats the experiment 10,000 times and computes the proportion of experiments in which the rth term was less than x. The second uses the functional format found.
 
 First:
+
+```python 
+
+import random
+import scipy
+
+random.seed(13)
+
+def montecarlo(N, r, x):
+
+experiment = []
+#vai guardar 1 se o r do for menor que x e 0 se r for maior.
+
+for i in range(1000):
+
+    values = []
+    #Esta lista vai guardar os valores de Z
+
+    for i in range(N):
+
+        values.append(random.uniform(0, 1))
+        # distribuição Uniforme
+
+    values = sorted(values)
+    #ordenar os resultados
+
+    if values[r] <= x:
+
+        experiment.append(1)
+
+    else:
+
+        experiment.append(0)
+
+return sum(experiment) / len(experiment) #proporção
+
+```
