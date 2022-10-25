@@ -150,3 +150,21 @@ Note that all ordered pairs $\\{ (h, j) | h,j \in \\{ 0, 1, ..., n - 1 \\} \\}$ 
 $$
 \sum_{k=1}^{n^2} e^{\frac{2\pi i}{n} (x_k + y_k)} = \sum_{h = 0}^{n - 1} \sum_{j = 0}^{n - 1} e^{\frac{2\pi i}{n} (h + j)}
 $$
+
+From now on $e^{\frac{2\pi i}{n} } = \beta$, to make notation easier.
+
+Let's represent this double summation as follows to improve the visualization of the problem:
+
+$$\Rightarrow \sum_{h = 0}^{n - 1} \sum_{j = 0}^{n - 1} \beta^{(h + j)} = \\
+
+\begin{matrix}
+& j = 0 & j = 1 & j = 2 & ... & j = n-3 & j = n-2 & j = n-1 \\
+h = 0 & \beta^{0} & \beta^{1} & \beta^{2} & ... & \beta^{n-3} & \beta^{n-2} & \beta^{n-1} \\
+h = 1 & \beta^{1} & \beta^{2} & \beta^{3} & ... & \beta^{n-2} & \beta^{n-1} & \beta^{n}\\
+h = 2 & \beta^{2} & \beta^{3} & \beta^{4} & ... & \beta^{n-1} & \beta^{n} & \beta^{n+1}\\
+... & & ... & & & & ... \\
+h = n-3 & \beta^{n-3} & \beta^{n-2} & \beta^{n-1} & ... & \beta^{n+n-6} & \beta^{n+n-5} & \beta^{n+n-4} \\
+h = n-2 & \beta^{n-2} & \beta^{n-1} & \beta^{n} & ... & \beta^{n+n-5} & \beta^{n+n-4} & \beta^{n+n-3} \\
+h = n-1 & \beta^{n-1} & \beta^{n} & \beta^{n+1} & ... & \beta^{n+n-4} & \beta^{n+n-3} & \beta^{n+n-2} \\
+\end{matrix}
+$$
