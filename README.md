@@ -20,6 +20,7 @@ Y(Z) \sim Bernoulli
 $$
 
 Note that $P(Y = 1) = P(Z \leq x) = x$ and $P(Y = 0) = P(Z > x) = 1 - x$, due to the distribution of $Z$. 
+
 Consider the following sequence: $\\{Y_{i}\\}_{i = 1}^{N}$. of zeros and ones. If we sort the sequence $\\{Z_{i}\\}_{i = 1}^{N}$ in a non-decreasing way, the sequence $\\{Y_{i}\\}_{i = 1}^{N}$ will be the number 1 appearing a few times, followed by zeros. This sequence starts to be 0 as soon as the kth value $\\{Z_{i}\\}_{i = 1}^{N}$ becomes greater than $x$.
 
 The r-th term of the ordered $\\{Z_{i}\\}_{i = 1}^{N}$ will be less than $x$ if the sequence $\\{Y_{i}\\}_{i = 1}^{N}$ has more ones than the value of $r$. The number of ones in $\\{Y_{i}\\}_{i = 1}^{N}$ is $\sum_{i = 1}^{N} Y_{i}$.
@@ -36,3 +37,7 @@ $$
 P(S  > r ) = \sum_{j = r + 1}^{N}P(S = j) =\\
  \sum_{j = r + 1}^{N} \binom{N}{j} x^{j}(1 - x)^{N - j}
 $$
+
+In order to confirm this result, two functions were implemented in the Python language. The first repeats the experiment 10,000 times and computes the proportion of experiments in which the rth term was less than x. The second uses the functional format found.
+
+First:
