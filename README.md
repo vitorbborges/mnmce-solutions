@@ -145,4 +145,4 @@ $$
 \end{split}
 $$
 
-Note that all ordered pairs $\{ (h, j) | h,j \in \{ 0, 1, ..., n - 1 \} \}$ will appear in this summation, so the order we we add them up doesn't matter, so we can write:
+Note that all ordered pairs $\\{ (h, j) | h,j \in \\{ 0, 1, ..., n - 1 \\} \\}$ will appear in this summation, so the order we we add them up doesn't matter, so we can write:
