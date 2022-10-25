@@ -156,7 +156,6 @@ From now on $e^{\frac{2\pi i}{n} } = \beta$, to make notation easier.
 Let's represent this double summation as follows to improve the visualization of the problem:
 
 $$\Rightarrow \sum_{h = 0}^{n - 1} \sum_{j = 0}^{n - 1} \beta^{(h + j)} = \\
-
 \begin{matrix}
 & j = 0 & j = 1 & j = 2 & ... & j = n-3 & j = n-2 & j = n-1 \\
 h = 0 & \beta^{0} & \beta^{1} & \beta^{2} & ... & \beta^{n-3} & \beta^{n-2} & \beta^{n-1} \\
