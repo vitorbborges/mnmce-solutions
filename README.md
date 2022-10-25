@@ -136,3 +136,9 @@ This abstract definition is made clearer with an example of an 'orthogonal array
 ![orthogonal_array](http://prorum.com/?qa=blob&qa_blobid=662566948865177969)
 
 If we apply the transformation $k = e^{2k\pi i / n}$ on all elements, the inner product of any two line vectors $\textbf{x}, \textbf{y}$ can be expressed by:
+
+$$
+ \textbf x \cdot \textbf y  & = \sum_{k=1}^{n^2} e^{(\frac{2\pi i}{n} \cdot x_k)} \cdot  e^{(\frac{2\pi i}{n} \cdot y_k)}\\
+& =  \sum_{k=1}^{n^2} e^{( \frac{2\pi i}{n} \cdot x_k + \frac{2\pi i}{n} \cdot y_k )} \\
+& =  \sum_{k=1}^{n^2} e^{\frac{2\pi i}{n} (x_k + y_k)}
+$$
