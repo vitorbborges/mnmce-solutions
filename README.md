@@ -146,3 +146,7 @@ $$
 $$
 
 Note that all ordered pairs $\\{ (h, j) | h,j \in \\{ 0, 1, ..., n - 1 \\} \\}$ will appear in this summation, so the order we we add them up doesn't matter, so we can write:
+
+$$
+\sum_{k=1}^{n^2} e^{\frac{2\pi i}{n} (x_k + y_k)} = \sum_{h = 0}^{n - 1} \sum_{j = 0}^{n - 1} e^{\frac{2\pi i}{n} (h + j)}
+$$
