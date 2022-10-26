@@ -1,6 +1,6 @@
 # mnmce-solutions
 
-This repository corresponds to 3 interesting answers submitted by me as the evaluation method for a post-graduation subject called Numerical Methods and Computational Models.
+This repository corresponds to 3 interesting answers submitted by me as the evaluation method for a post-graduation subject called Numerical Methods and Computational Models in Economics.
 
 ## Show that if each element $k$ in an 'orthogonal array' is replaced by $e^{2 \pi k i / n}$, the rows become orthogonal vectors in the usual sense (their inner product is equal to zero ).
 
