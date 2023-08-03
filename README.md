@@ -12,6 +12,11 @@ This abstract definition is made clearer with an example of an 'orthogonal array
 
 ![orthogonal_array](http://prorum.com/?qa=blob&qa_blobid=662566948865177969)
 
+|0|0|0|0|1|1|1|1|2|2|2|2|3|3|3|3|
+|0|1|2|3|0|1|2|3|0|1|2|3|0|1|2|3|
+|0|1|2|3|3|2|1|0|1|0|3|2|2|3|0|1|
+|0|1|2|3|2|3|0|1|3|2|1|0|1|0|3|2|
+
 If we apply the transformation $k = e^{2k\pi i / n}$ on all elements, the inner product of any two line vectors $\textbf{x}, \textbf{y}$ can be expressed by:
 
 $$
