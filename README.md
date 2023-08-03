@@ -8,12 +8,15 @@ The book defines the 'orthogonal array' mathematical structure as follows:
 
 The string $x_1 x_2 ... x_N$ is called $n-ary$ if each element $x_j$ belongs to the set $\{0, 1, ..., n - 1\}$ of digits $n-ary$. The two strings $x_1 x_2 ... x_N$ and $y_1 y_2 ... y_N$ are said to be $orthogonal$ if the $N$ pairs $(x_j,y_j)$ are distinct for $1 \leq j \leq N$. (Consequently, two strings $n-ary$ cannot be orthogonal if their length exceeds $n^2$.) A matrix $n-ary$ with $m$ rows and $n ^2$ columns whose rows are orthogonal to each other is called 'orthogonal array' of order $n$ and depth $m$.
 
+This abstract definition is made clearer with an example of an 'orthogonal array' of order 4 and depth 5:
+
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
 | 0 | 1 | 2 | 3 | 0 | 1 | 2 | 3 | 0 | 1 | 2 | 3 | 0 | 1 | 2 | 3 |
 | 0 | 1 | 2 | 3 | 3 | 2 | 1 | 0 | 1 | 0 | 3 | 2 | 2 | 3 | 0 | 1 |
 | 0 | 1 | 2 | 3 | 2 | 3 | 0 | 1 | 3 | 2 | 1 | 0 | 1 | 0 | 3 | 2 |
+
 
 If we apply the transformation $k = e^{2k\pi i / n}$ on all elements, the inner product of any two line vectors $\textbf{x}, \textbf{y}$ can be expressed by:
 
